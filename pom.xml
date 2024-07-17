@@ -40,8 +40,8 @@
 
         <!-- WebJars -->
         <webjars.bootstrap.version>3.3.7</webjars.bootstrap.version>
-		<webjars.jquery.version>3.2.1</webjars.jquery.version>
-		<webjars.webjars-locator.version>0.40</webjars.webjars-locator.version>
+        <webjars.jquery.version>3.2.1</webjars.jquery.version>
+        <webjars.webjars-locator.version>0.40</webjars.webjars-locator.version>
     </properties>
 
     <!-- Add typical dependencies for a web application -->
@@ -98,7 +98,15 @@
             <version>1.18.30</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
 
     </dependencies>
 
