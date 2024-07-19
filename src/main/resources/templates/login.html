@@ -18,5 +18,8 @@
         <button type="submit">Login</button>
     </div>
 </form>
+<div th:if="${param.logout}">
+    <p>You have been logged out successfully.</p>
+</div>
 </body>
 </html>

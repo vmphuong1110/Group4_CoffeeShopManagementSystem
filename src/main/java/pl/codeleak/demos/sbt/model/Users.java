@@ -32,8 +32,9 @@ public class Users {
     @Column(name="address")
     private String address;
 
+
     @Column(name="avatar")
-    private String avatar;
+    private String avatar = "abc";
 
     @Column(name="username")
     private String username;
@@ -43,6 +44,8 @@ public class Users {
 
     @Column(name="role")
     private int role;
+
+
 
     public Users() {
 

@@ -28,20 +28,22 @@ public class WebConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/login", "/resources/**").permitAll() // Cho phép truy cập không cần xác thực
-                .anyRequest().authenticated() // Tất cả các request khác đều cần xác thực
+                .antMatchers("/login", "/register", "/resources/**").permitAll()
+                .anyRequest().authenticated()
                 .and()
                 .formLogin()
-                .loginPage("/login") // Đường dẫn đến trang login
-                .defaultSuccessUrl("/home", true) // Trang chuyển đến sau khi login thành công
+                .loginPage("/login")
+                .defaultSuccessUrl("/home", true)
                 .permitAll()
                 .and()
                 .logout()
+                .logoutUrl("/logout") // URL để xử lý logout
+                .logoutSuccessUrl("/login?logout")
                 .permitAll();
     }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return NoOpPasswordEncoder.getInstance(); // Không mã hóa mật khẩu
+        return NoOpPasswordEncoder.getInstance();
     }
 }
