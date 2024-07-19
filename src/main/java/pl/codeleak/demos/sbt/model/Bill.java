@@ -38,4 +38,7 @@ public class Bill {
         this.customerId = customerId;
     }
 
+    public Bill(int billId) {
+        this.billId = billId;
+    }
 }
