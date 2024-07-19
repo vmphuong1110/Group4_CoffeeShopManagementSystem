@@ -13,4 +13,8 @@ public class ProductService {
     public Iterable<Product> getAllProducts() {
         return productRepository.findAll();
     }
+
+    public Iterable<Product> getProductsByCategory(int cid) {
+        return productRepository.findByCategoryId(cid);
+    }
 }

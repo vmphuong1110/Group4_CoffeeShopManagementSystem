@@ -30,17 +30,17 @@ public class Product {
     private String image;
 
     @Column(name = "category_id")
-    private int category_id;
+    private int categoryId;
 
     public Product() {
     }
 
-    public Product(String pname, String description, String unit, int quantity, String image, int category_id) {
+    public Product(String pname, String description, String unit, int quantity, String image, int categoryId) {
         this.pname = pname;
         this.description = description;
         this.unit = unit;
         this.quantity = quantity;
         this.image = image;
-        this.category_id = category_id;
+        this.categoryId = categoryId;
     }
 }

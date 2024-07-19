@@ -6,5 +6,5 @@ import pl.codeleak.demos.sbt.model.Product;
 
 @Repository
 public interface ProductRepository extends CrudRepository<Product, Integer> {
-
+       Iterable<Product> findByCategoryId(int cid);
 }
